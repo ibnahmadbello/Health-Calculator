@@ -12,11 +12,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class BMIActivity extends AppCompatActivity {
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+public class BMIActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private static final String TAG = BMIActivity.class.getSimpleName();
 
     private LinearLayout mLinearLayout;
-    private Button mPoundInchesButton;
-    private Button mKgMetersButton;
+    private Button mPoundInchesButton, mKgMetersButton, mCalculateButton;
     private TextView mResultTextView;
     private EditText mPoundEditText, mInchesEditText, mKilogramEditText, mMetersEditText;
 
@@ -28,21 +32,11 @@ public class BMIActivity extends AppCompatActivity {
         mLinearLayout = findViewById(R.id.bottom_details_linear_layout);
         setUpLinearOutline();
 
-        mPoundInchesButton = findViewById(R.id.bmi_kg_meters_button);
-        mPoundInchesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(BMIActivity.this, "Pound and Inches is clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
+        mPoundInchesButton = findViewById(R.id.bmi_pound_inches_button);
+        mPoundInchesButton.setOnClickListener(this);
 
-        mKgMetersButton = findViewById(R.id.bmi_pound_inches_button);
-        mKgMetersButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(BMIActivity.this, "Kilogram and Meters is clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
+        mKgMetersButton = findViewById(R.id.bmi_kg_meters_button);
+        mKgMetersButton.setOnClickListener(this);
 
         mResultTextView = findViewById(R.id.result_text_view);
 
@@ -51,6 +45,8 @@ public class BMIActivity extends AppCompatActivity {
         mKilogramEditText = findViewById(R.id.weight_in_kg_edit_text);
         mMetersEditText = findViewById(R.id.height_in_meters_edit_text);
 
+        mCalculateButton = findViewById(R.id.show_result_button);
+        mCalculateButton.setOnClickListener(this);
 
     }
 
@@ -72,5 +68,49 @@ public class BMIActivity extends AppCompatActivity {
             mLinearLayout.setOutlineProvider(null);
             mLinearLayout.setClipToOutline(false);
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.bmi_kg_meters_button:
+                mKilogramEditText.setVisibility(View.VISIBLE);
+                mMetersEditText.setVisibility(View.VISIBLE);
+                mPoundEditText.setVisibility(View.GONE);
+                mInchesEditText.setVisibility(View.GONE);
+                break;
+            case R.id.bmi_pound_inches_button:
+                mPoundEditText.setVisibility(View.VISIBLE);
+                mInchesEditText.setVisibility(View.VISIBLE);
+                mKilogramEditText.setVisibility(View.GONE);
+                mMetersEditText.setVisibility(View.GONE);
+                break;
+            case R.id.show_result_button:
+                calculateBMI();
+                break;
+        }
+    }
+
+    private void calculateBMI(){
+        String weight = "";
+        String height = "";
+
+        if (mPoundEditText.isShown() && mInchesEditText.isShown()){
+            weight = mPoundEditText.getText().toString().trim();
+            height = mInchesEditText.getText().toString().trim();
+            Toast.makeText(this, "Pound and Inches should work!", Toast.LENGTH_SHORT).show();
+        } else if (mKilogramEditText.isShown() && mMetersEditText.isShown()){
+            weight = mKilogramEditText.getText().toString().trim();
+            height = mMetersEditText.getText().toString().trim();
+            double weightValue = Double.parseDouble(weight);
+            double heightValue = Double.parseDouble(height);
+            double result = (weightValue / (heightValue * heightValue));
+            /*NumberFormat numberFormat = new DecimalFormat("#0.00");
+            numberFormat.format(result);*/
+            String resultShown = String.format("%.2f", result);
+            mResultTextView.setText(getString(R.string.display_result) + resultShown);
+            Toast.makeText(this, "Kilogram and Meters is shown!" + result, Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

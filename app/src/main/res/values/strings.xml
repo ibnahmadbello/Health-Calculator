@@ -28,5 +28,6 @@
     <string name="hint_height_in_meters">Enter your Height in Meters</string>
 
     <string name="calculate">Show Result</string>
+    <string name="display_result">Your Body Mass Index (BMI) is: </string>
 
 </resources>
