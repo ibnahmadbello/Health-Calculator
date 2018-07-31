@@ -27,4 +27,6 @@
     <string name="hint_height_in_inches">Enter your Height in Inches</string>
     <string name="hint_height_in_meters">Enter your Height in Meters</string>
 
+    <string name="calculate">Show Result</string>
+
 </resources>

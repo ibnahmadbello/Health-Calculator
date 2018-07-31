@@ -14,30 +14,53 @@
         android:layout_margin="@dimen/activity_vertical_margin"
         android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/weight_in_pound_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="@string/hint_weight_in_pound"/>
+            android:hint="@string/hint_weight_in_pound"
+            android:visibility="gone"/>
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/height_in_inches_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="@string/hint_height_in_inches"/>
+            android:hint="@string/hint_height_in_inches"
+            android:visibility="gone"/>
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/weight_in_kg_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="@string/hint_weight_in_kg"/>
+            android:hint="@string/hint_weight_in_kg"
+            android:visibility="gone"/>
+        </android.support.design.widget.TextInputLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/height_in_meters_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:hint="@string/hint_height_in_meters"/>
+            android:hint="@string/hint_height_in_meters"
+            android:visibility="gone"/>
+        </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -45,16 +68,25 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal">
             <Button
+                android:id="@+id/bmi_kg_meters_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bmi_in_kg_meters"
                 android:textAllCaps="false"/>
             <Button
+                android:id="@+id/bmi_pound_inches_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bmi_in_pound_inches"
                 android:textAllCaps="false"/>
         </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/calculate"
+            android:textAllCaps="false"/>
 
         <TextView
             android:id="@+id/result_text_view"
