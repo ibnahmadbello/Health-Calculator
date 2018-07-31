@@ -98,19 +98,32 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
         if (mPoundEditText.isShown() && mInchesEditText.isShown()){
             weight = mPoundEditText.getText().toString().trim();
             height = mInchesEditText.getText().toString().trim();
+            BMIPoundInches(weight, height);
             Toast.makeText(this, "Pound and Inches should work!", Toast.LENGTH_SHORT).show();
         } else if (mKilogramEditText.isShown() && mMetersEditText.isShown()){
             weight = mKilogramEditText.getText().toString().trim();
             height = mMetersEditText.getText().toString().trim();
-            double weightValue = Double.parseDouble(weight);
-            double heightValue = Double.parseDouble(height);
-            double result = (weightValue / (heightValue * heightValue));
-            /*NumberFormat numberFormat = new DecimalFormat("#0.00");
-            numberFormat.format(result);*/
-            String resultShown = String.format("%.2f", result);
-            mResultTextView.setText(getString(R.string.display_result) + resultShown);
-            Toast.makeText(this, "Kilogram and Meters is shown!" + result, Toast.LENGTH_SHORT).show();
+            BMIKilogramMeters(weight, height);
+            Toast.makeText(this, "Kilogram and Meters is shown!", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private void BMIPoundInches(String passWeight, String passHeight){
+        double weightValue = Double.parseDouble(passWeight);
+        double heightValue = Double.parseDouble(passHeight);
+        double result = ((weightValue * 703) / (heightValue * heightValue));
+        String resultShown = String.format("%.2f", result);
+        mResultTextView.setText(getString(R.string.display_result) + resultShown);
+    }
+
+    private void BMIKilogramMeters(String passWeight, String passHeight){
+        double weightValue = Double.parseDouble(passWeight);
+        double heightValue = Double.parseDouble(passHeight);
+        double result = (weightValue / (heightValue * heightValue));
+            /*NumberFormat numberFormat = new DecimalFormat("#0.00");
+            numberFormat.format(result);*/
+        String resultShown = String.format("%.2f", result);
+        mResultTextView.setText(getString(R.string.display_result) + resultShown);
     }
 }
