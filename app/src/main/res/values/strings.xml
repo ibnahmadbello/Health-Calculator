@@ -5,4 +5,18 @@
 
     <string name="heart_rate_calculator">Heart Rate Calculator</string>
 
+    <string name="bmi_title">BMI VALUES</string>
+    
+    <string name="underweight">Underweight:</string>
+    <string name="underweight_value">less than 18.5</string>
+    
+    <string name="normal">Normal:</string>
+    <string name="normal_value">between 18.5 and 24.9</string>
+    
+    <string name="overweight">Overweight:</string>
+    <string name="overweight_value">between 25 and 29.9</string>
+    
+    <string name="obese">Obese:</string>
+    <string name="obese_value">30 or greater</string>
+
 </resources>

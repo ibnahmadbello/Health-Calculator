@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BMIActivity"></activity>
+        <activity android:name=".BMIActivity"
+            android:label="@string/body_mass_index"></activity>
     </application>
 
 </manifest>

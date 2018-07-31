@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.bmi_text_view:
-                Intent startBMIActivity = new Intent(MainActivity.this, null);
+                Intent startBMIActivity = new Intent(MainActivity.this, BMIActivity.class);
+                startActivity(startBMIActivity);
         }
     }
 }
