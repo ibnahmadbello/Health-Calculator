@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">HealthCalculator</string>
 
+    <string name="body_mass_index">Body Mass Index</string>
+
+    <string name="heart_rate_calculator">Heart Rate Calculator</string>
 
 </resources>

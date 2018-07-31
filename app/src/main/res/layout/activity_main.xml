@@ -12,7 +12,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/bmi_text_view"
         style="@style/ActivityLabelStyle"
-        android:text="Hello World!" />
+        android:text="@string/body_mass_index" />
+
+    <TextView
+        style="@style/ActivityLabelStyle"
+        android:text="@string/heart_rate_calculator" />
 
 </LinearLayout>
