@@ -19,4 +19,12 @@
     <string name="obese">Obese:</string>
     <string name="obese_value">30 or greater</string>
 
+    <string name="bmi_in_pound_inches">BMI In Pound\/Inches</string>
+    <string name="bmi_in_kg_meters">BMI In Kilogram\/Meters</string>
+
+    <string name="hint_weight_in_pound">Enter your Weight in Pound</string>
+    <string name="hint_weight_in_kg">Enter your Weight in Kg</string>
+    <string name="hint_height_in_inches">Enter your Height in Inches</string>
+    <string name="hint_height_in_meters">Enter your Height in Meters</string>
+
 </resources>
