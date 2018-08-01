@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".BMIActivity"
-            android:label="@string/body_mass_index"></activity>
+            android:label="@string/body_mass_index"
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
