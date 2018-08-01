@@ -77,13 +77,17 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
                 mKilogramEditText.setVisibility(View.VISIBLE);
                 mMetersEditText.setVisibility(View.VISIBLE);
                 mPoundEditText.setVisibility(View.GONE);
+                mPoundEditText.setText("");
                 mInchesEditText.setVisibility(View.GONE);
+                mInchesEditText.setText("");
                 break;
             case R.id.bmi_pound_inches_button:
                 mPoundEditText.setVisibility(View.VISIBLE);
                 mInchesEditText.setVisibility(View.VISIBLE);
                 mKilogramEditText.setVisibility(View.GONE);
+                mKilogramEditText.setText("");
                 mMetersEditText.setVisibility(View.GONE);
+                mMetersEditText.setText("");
                 break;
             case R.id.show_result_button:
                 calculateBMI();
@@ -95,6 +99,12 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
         String weight = "";
         String height = "";
 
+        if (mPoundEditText.length() == 0 || mInchesEditText.length() == 0){
+            return;
+        }
+        if (mKilogramEditText.length() == 0 || mMetersEditText.length() == 0){
+            return;
+        }
         if (mPoundEditText.isShown() && mInchesEditText.isShown()){
             weight = mPoundEditText.getText().toString().trim();
             height = mInchesEditText.getText().toString().trim();
