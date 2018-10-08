@@ -21,6 +21,7 @@
             android:label="@string/body_mass_index"
             android:parentActivityName=".MainActivity"/>
         <activity android:name=".HeartRatesActivity"
+            android:label="@string/heart_rate_calculator"
             android:parentActivityName=".MainActivity"/>
     </application>
 

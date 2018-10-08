@@ -17,6 +17,7 @@
         android:text="@string/body_mass_index" />
 
     <TextView
+        android:id="@+id/heart_rate_text_view"
         style="@style/ActivityLabelStyle"
         android:text="@string/heart_rate_calculator" />
 

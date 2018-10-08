@@ -3,6 +3,8 @@
 
     <string name="body_mass_index">Body Mass Index</string>
 
+    <string name="heart_rate">Heart Rate Calculator</string>
+
     <string name="heart_rate_calculator">Heart Rate Calculator</string>
 
     <string name="bmi_title">BMI VALUES</string>

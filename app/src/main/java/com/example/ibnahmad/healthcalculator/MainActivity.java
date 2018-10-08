@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView mBMITextView;
+    private TextView mBMITextView, mHeartRateTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBMITextView = findViewById(R.id.bmi_text_view);
         mBMITextView.setOnClickListener(this);
 
+        mHeartRateTextView = findViewById(R.id.heart_rate_text_view);
+        mHeartRateTextView.setOnClickListener(this);
+
     }
 
     @Override
@@ -26,6 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bmi_text_view:
                 Intent startBMIActivity = new Intent(MainActivity.this, BMIActivity.class);
                 startActivity(startBMIActivity);
+                break;
+            case R.id.heart_rate_text_view:
+                Intent startHeartRateActivity = new Intent(MainActivity.this, HeartRatesActivity.class);
+                startActivity(startHeartRateActivity);
+                break;
         }
     }
 }
