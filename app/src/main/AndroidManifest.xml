@@ -16,10 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BMIActivity"
+        <activity
+            android:name=".BMIActivity"
             android:label="@string/body_mass_index"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".HeartRatesActivity"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
