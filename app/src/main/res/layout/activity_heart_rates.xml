@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HeartRatesActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/bottom_disclaimer_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/disclaimer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disclaimer"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/disclaimer_detail_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

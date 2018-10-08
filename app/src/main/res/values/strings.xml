@@ -32,4 +32,8 @@
     <string name="calculate">Show Result</string>
     <string name="display_result">Your Body Mass Index (BMI) is: </string>
 
+    <string name="disclaimer">Disclaimer:</string>
+    <string name="disclaimer_detail">Always consult a Physician or a qualified health-care
+        professional\n  before beginning or modifying your exercise program.</string>
+
 </resources>
