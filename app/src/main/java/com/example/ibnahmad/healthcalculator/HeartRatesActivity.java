@@ -11,8 +11,10 @@ import android.text.format.DateFormat;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
 
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -22,6 +24,9 @@ public class HeartRatesActivity extends AppCompatActivity implements
     private static final String TAG = HeartRatesActivity.class.getSimpleName();
     private static int year0fBirth;
     private TextView mDateOfBirth;
+    private EditText mFirstNameEditText, mLastNameEditText;
+    String firstName, lastName;
+    int year, month, dayOfMonth;
 
     private HeartRates mHeartRates;
 
@@ -30,7 +35,8 @@ public class HeartRatesActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heart_rates);
 
-        mHeartRates = new HeartRates();
+        mFirstNameEditText = findViewById(R.id.first_name_text_view);
+        mLastNameEditText = findViewById(R.id.last_name_text_view);
         mDateOfBirth = findViewById(R.id.set_date_of_birth);
         View mSelectDOB = findViewById(R.id.date_of_birth_layout);
 
@@ -48,5 +54,13 @@ public class HeartRatesActivity extends AppCompatActivity implements
     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
         mDateOfBirth.setText(day + "/" + (month + 1) + "/" + year);
         year0fBirth = year;
+
+    }
+
+    public void getDetails(){
+        firstName = mFirstNameEditText.getText().toString();
+        lastName = mLastNameEditText.getText().toString();
+        mHeartRates = new HeartRates(firstName, lastName, LocalDate.of(year, month, dayOfMonth));
+
     }
 }
