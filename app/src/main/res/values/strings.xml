@@ -62,5 +62,6 @@
     <string name="effort">Effort</string>
     <string name="effect">Effect</string>
     <string name="health_tip">Health Tips</string>
+    <string name="copy_right_stuff">Copy right</string>
 
 </resources>
