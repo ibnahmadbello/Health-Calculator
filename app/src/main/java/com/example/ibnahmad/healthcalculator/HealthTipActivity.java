@@ -1,5 +1,6 @@
 package com.example.ibnahmad.healthcalculator;
 
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,7 +25,8 @@ public class HealthTipActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id){
             case R.id.copy_right:
-
+                DialogFragment copyRightDialog = new CopyRightDialogFragment();
+                copyRightDialog.show(getSupportFragmentManager(), "copyright");
         }
         return super.onOptionsItemSelected(item);
     }

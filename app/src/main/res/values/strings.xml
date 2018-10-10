@@ -63,5 +63,31 @@
     <string name="effect">Effect</string>
     <string name="health_tip">Health Tips</string>
     <string name="copy_right_stuff">Copy right</string>
+    <string name="zone_five">171 - 190</string>
+    <string name="very_hard">Very hard</string>
+    <string name="zone_five_effect">Performance Redline Zone</string>
+    <string name="zone_five_effort">90 - 100%</string>
+    <string name="zone_five_effect_sub">Develops maximum performance and speed</string>
+    <string name="zone_four">152 - 171</string>
+    <string name="hard">Hard</string>
+    <string name="zone_four_effort">80 - 90%</string>
+    <string name="zone_four_effect">Threshold Zone</string>
+    <string name="zone_four_effect_sub">Increase maximum performance capacity</string>
+    <string name="zone_three">133 - 152</string>
+    <string name="moderate">Moderate</string>
+    <string name="zone_three_effort">70 -80%</string>
+    <string name="zone_three_effect">Aerobic Zone</string>
+    <string name="zone_three_effect_sub">Improve aerobic fitness</string>
+    <string name="zone_two">114 - 133</string>
+    <string name="light">Light</string>
+    <string name="zone_two_effort">60 - 70%</string>
+    <string name="zone_two_effect">Temperate Zone</string>
+    <string name="zone_two_effect_sub">Improves basic endurance and fat burning</string>
+    <string name="zone_one">95 - 114</string>
+    <string name="very_light">Very Light</string>
+    <string name="zone_one_effort">50 - 60%</string>
+    <string name="zone_one_effect">Healthy Heart Zone</string>
+    <string name="zone_one_effect_sub">Improves overall health and helps recovery</string>
+    <string name="copy_right_content">This is to inform user that content of this app are not personal opinion. Rather they were gotten from sites like https://www.cancer.org and also from https://www.lifespanfitness.com</string>
 
 </resources>
