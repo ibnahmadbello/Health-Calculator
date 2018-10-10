@@ -42,5 +42,15 @@
     <string name="date_of_birth">Date of Birth:</string>
     <string name="date_of_birth_not_set">Not Set</string>
     <string name="date_picker_title">Set Date Of Birth</string>
+    <string name="first_name_label">First Name:</string>
+    <string name="target_heart_rate_label">Target Heart Rate Range:</string>
+    <string name="maximum_heart_rate_label">Maximum Heart Rate (per minute):</string>
+    <string name="date_of_birth_label">Date of Birth:</string>
+    <string name="last_name_label">Last Name:</string>
+    <string name="age_label">Age (in years):</string>
+    <string name="maximum">%d per minute</string>
+    <string name="years">%1$d Years</string>
+    <string name="target_heart_rate">Your target heart rate range is %d - %d</string>
+    <string name="show_health_tip">Show Health Tips</string>
 
 </resources>

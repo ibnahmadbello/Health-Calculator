@@ -7,9 +7,144 @@
     tools:context=".HeartRatesActivity">
 
     <LinearLayout
+        android:id="@+id/result_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/first_name_label_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name_label"/>
+            <TextView
+                android:id="@+id/show_first_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/last_name_label_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name_label"/>
+            <TextView
+                android:id="@+id/show_last_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/date_of_birth_label_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth_label"/>
+            <TextView
+                android:id="@+id/show_date_of_birth"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/age_label_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/age_label"/>
+            <TextView
+                android:id="@+id/show_age"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/maximum_heart_rate_label_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/maximum_heart_rate_label"/>
+            <TextView
+                android:id="@+id/show_maximum_heart_rate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/target_heart_rate_label_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/target_heart_rate_label"/>
+            <TextView
+                android:id="@+id/show_target_heart_rate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                tools:text="@tools:sample/lorem"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:layout_centerInParent="true">
 
         <android.support.design.widget.TextInputLayout
@@ -66,6 +201,14 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/show_health_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_health_tip"
+        android:textAllCaps="false"
+        android:layout_above="@+id/bottom_disclaimer_linear_layout"
+        android:layout_centerHorizontal="true" />
     <LinearLayout
         android:id="@+id/bottom_disclaimer_linear_layout"
         android:layout_width="match_parent"
@@ -90,7 +233,7 @@
             android:gravity="center"
             android:text="@string/disclaimer_detail"
             android:textAppearance="?android:textAppearance"
-            android:layout_margin="8dp"
+            android:layout_margin="10dp"
             android:lines="3"
             android:maxLines="3"/>
 
