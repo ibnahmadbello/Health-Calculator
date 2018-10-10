@@ -31,7 +31,7 @@ public class HeartRatesActivity extends AppCompatActivity implements
     private TextView mDateOfBirth, mFirstNameTextView, mLastNameTextView, mDOBTextView,
             maxHeartRateTextView, targetHeartRateTextView, ageTextView;
     private EditText mFirstNameEditText, mLastNameEditText;
-    private Button showDetailButton;
+    private Button showDetailButton, showHealthTips;
     private LinearLayout mResultLinearLayout, mDisclaimerLinearLayout;
     String firstName, lastName, DOB;
     public static final int MAX_HEART_RATE = 220;
@@ -56,11 +56,13 @@ public class HeartRatesActivity extends AppCompatActivity implements
         targetHeartRateTextView = findViewById(R.id.show_target_heart_rate);
         ageTextView = findViewById(R.id.show_age);
         mDisclaimerLinearLayout = findViewById(R.id.bottom_disclaimer_linear_layout);
+        showHealthTips = findViewById(R.id.show_health_tip);
         setUpLinearOutline();
         View mSelectDOB = findViewById(R.id.date_of_birth_layout);
 
         mSelectDOB.setOnClickListener(this);
         showDetailButton.setOnClickListener(this);
+        showHealthTips.setOnClickListener(this);
 
 //        getDetails();
     }
@@ -75,6 +77,9 @@ public class HeartRatesActivity extends AppCompatActivity implements
             case R.id.show_heart_rate_button:
                 getDetails();
                 break;
+            case R.id.show_health_tip:
+                Intent intent = new Intent(this, HealthTipActivity.class);
+                startActivity(intent);
         }
 
     }
