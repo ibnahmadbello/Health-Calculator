@@ -6,9 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".HealthTipActivity">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
 
         <TextView
             android:id="@+id/note_one"
@@ -40,7 +43,7 @@
 
         <TableLayout
             android:id="@+id/heart_rate_training_zone_table"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/note_three_sub">
             <TableRow
@@ -48,12 +51,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/heart_rate_label"
                     android:textStyle="bold"/>
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/effort"
                     android:textStyle="bold"/>
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/effect"
                     android:textStyle="bold"/>
             </TableRow>
@@ -63,8 +75,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/zone_five"/>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/very_hard"
@@ -72,10 +90,16 @@
                     </TableRow>
                     <TableRow>
                         <TextView
-                            android:text="@string/zone_five_effort"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/zone_five_effort"
+                            android:maxLines="2"/>
                     </TableRow>
                 </TableLayout>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/zone_five_effect"
@@ -96,8 +120,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/zone_four"/>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/hard"
@@ -108,7 +138,10 @@
                             android:text="@string/zone_four_effort"/>
                     </TableRow>
                 </TableLayout>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/zone_four_effect"
@@ -126,8 +159,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/zone_three"/>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/moderate"
@@ -138,7 +177,10 @@
                             android:text="@string/zone_three_effort"/>
                     </TableRow>
                 </TableLayout>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/zone_three_effect"
@@ -156,8 +198,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/zone_two"/>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/light"
@@ -168,7 +216,10 @@
                             android:text="@string/zone_two_effort"/>
                     </TableRow>
                 </TableLayout>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/zone_two_effect"
@@ -186,8 +237,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
                     android:text="@string/zone_one"/>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/very_light"
@@ -198,7 +255,10 @@
                             android:text="@string/zone_one_effort"/>
                     </TableRow>
                 </TableLayout>
-                <TableLayout>
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content">
                     <TableRow>
                         <TextView
                             android:text="@string/zone_one_effect"
@@ -215,11 +275,195 @@
             </TableRow>
         </TableLayout>
 
+        <LinearLayout
+            android:id="@+id/zone_one_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heart_rate_training_zone_table"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_one_heading"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_one_subtitle"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercise_benefits"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zone_one_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zone_two_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zone_one_explanation"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_two_heading"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_two_subtitle"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/exercise_benefits"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zone_two_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zone_three_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zone_two_explanation"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_three_heading"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_three_subtitle"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/exercise_benefits"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zone_three_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zone_four_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zone_three_explanation"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_four_heading"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_four_subtitle"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/exercise_benefits"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zone_four_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zone_five_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zone_four_explanation"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_five_heading"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zone_five_subtitle"
+                android:textStyle="italic"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/exercise_benefits"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zone_five_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
         <TextView
             android:id="@+id/how_to_check_heart_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/heart_rate_training_zone_table"
+            android:layout_below="@id/zone_five_explanation"
             android:text="@string/how_to_check_heart_rate"
             android:textAppearance="?android:textAppearanceMedium"/>
 
