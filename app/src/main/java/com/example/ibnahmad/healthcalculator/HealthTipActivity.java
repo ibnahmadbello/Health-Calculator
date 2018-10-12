@@ -18,7 +18,7 @@ public class HealthTipActivity extends AppCompatActivity {
 
         webView = findViewById(R.id.web_view);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/sample.html");
+        webView.loadUrl("file:///android_asset/health-tips.html");
     }
 
     @Override
