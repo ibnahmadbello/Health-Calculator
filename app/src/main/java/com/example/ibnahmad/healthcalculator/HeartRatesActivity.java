@@ -118,6 +118,7 @@ public class HeartRatesActivity extends AppCompatActivity implements
         targetHeartRateTextView.setText(getResources().getString(R.string.target_heart_rate, minHeartTargetRate, maxHeartTargetRate));
     }
 
+    // Require API 21
     private void setUpLinearOutline(){
         ViewOutlineProvider viewOutlineProvider = new ViewOutlineProvider() {
             @Override
