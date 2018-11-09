@@ -27,7 +27,6 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
     String weight = "";
     String height = "";
     double result = 0.0;
-    String resultShown = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
