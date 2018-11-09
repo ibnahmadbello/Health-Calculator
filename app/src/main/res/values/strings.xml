@@ -30,7 +30,7 @@
     <string name="hint_height_in_meters">Enter your Height in Meters</string>
 
     <string name="calculate">Show Result</string>
-    <string name="display_result">Your Body Mass Index (BMI) is: </string>
+    <string name="display_result">Your Body Mass Index (BMI) is: %.2f</string>
 
     <string name="disclaimer">Disclaimer:</string>
     <string name="disclaimer_detail">Always consult a Physician or a qualified health-care
@@ -106,4 +106,6 @@
     <string name="zone_five_subtitle">Peak Race Zone - Athlete Only Zone!</string>
     <string name="zone_five_content">Highest total calories burned, but lowest percentage of fat calories. Lactate tolerance zone. This zone is only for the very healthy and fit!!! Spending too much time in this zone, even for the elite athletes can be painful, cause injuries and lead to over training, which leads to poor performance!</string>
 
+    <string name="health_tips">Health Tips</string>
+    <string name="empty_values">Your weight and height cannot be null.</string>
 </resources>

@@ -17,9 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"/>
 
-        </activity>
         <activity
             android:name=".BMIActivity"
             android:label="@string/body_mass_index"
@@ -30,7 +30,11 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".HealthTipActivity"
             android:parentActivityName=".HeartRatesActivity"
-            android:label="@string/health_tip"/>
+            android:label="@string/health_tips">
+            <intent-filter android:label="@string/health_tips">
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

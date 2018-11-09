@@ -24,6 +24,11 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
     private TextView mResultTextView;
     private EditText mPoundEditText, mInchesEditText, mKilogramEditText, mMetersEditText;
 
+    String weight = "";
+    String height = "";
+    double result = 0.0;
+    String resultShown = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +79,7 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.bmi_kg_meters_button:
+                result = 0.0;
                 mKilogramEditText.setVisibility(View.VISIBLE);
                 mMetersEditText.setVisibility(View.VISIBLE);
                 mPoundEditText.setVisibility(View.GONE);
@@ -82,6 +88,7 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
                 mInchesEditText.setText("");
                 break;
             case R.id.bmi_pound_inches_button:
+                result = 0.0;
                 mPoundEditText.setVisibility(View.VISIBLE);
                 mInchesEditText.setVisibility(View.VISIBLE);
                 mKilogramEditText.setVisibility(View.GONE);
@@ -96,21 +103,21 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     private void calculateBMI(){
-        String weight = "";
-        String height = "";
-
-        if (mPoundEditText.length() == 0 || mInchesEditText.length() == 0){
-            return;
-        }
-        if (mKilogramEditText.length() == 0 || mMetersEditText.length() == 0){
-            return;
-        }
         if (mPoundEditText.isShown() && mInchesEditText.isShown()){
+            if (mPoundEditText.length() == 0 || mInchesEditText.length() == 0){
+                mResultTextView.setText(R.string.empty_values);
+                return;
+            }
             weight = mPoundEditText.getText().toString().trim();
             height = mInchesEditText.getText().toString().trim();
             BMIPoundInches(weight, height);
             Toast.makeText(this, "Pound and Inches should work!", Toast.LENGTH_SHORT).show();
-        } else if (mKilogramEditText.isShown() && mMetersEditText.isShown()){
+        }
+        else if (mKilogramEditText.isShown() && mMetersEditText.isShown()){
+            if (mKilogramEditText.length() == 0 || mMetersEditText.length() == 0){
+                mResultTextView.setText(R.string.empty_values);
+                return;
+            }
             weight = mKilogramEditText.getText().toString().trim();
             height = mMetersEditText.getText().toString().trim();
             BMIKilogramMeters(weight, height);
@@ -122,18 +129,18 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
     private void BMIPoundInches(String passWeight, String passHeight){
         double weightValue = Double.parseDouble(passWeight);
         double heightValue = Double.parseDouble(passHeight);
-        double result = ((weightValue * 703) / (heightValue * heightValue));
-        String resultShown = String.format("%.2f", result);
-        mResultTextView.setText(getString(R.string.display_result) + resultShown);
+        result = ((weightValue * 703) / (heightValue * heightValue));
+//        resultShown = String.format("%.2f", result);
+        mResultTextView.setText(getResources().getString(R.string.display_result, result));
     }
 
     private void BMIKilogramMeters(String passWeight, String passHeight){
         double weightValue = Double.parseDouble(passWeight);
         double heightValue = Double.parseDouble(passHeight);
-        double result = (weightValue / (heightValue * heightValue));
+        result = (weightValue / (heightValue * heightValue));
             /*NumberFormat numberFormat = new DecimalFormat("#0.00");
             numberFormat.format(result);*/
-        String resultShown = String.format("%.2f", result);
-        mResultTextView.setText(getString(R.string.display_result) + resultShown);
+//        resultShown = String.format("%.2f", result);
+        mResultTextView.setText(getResources().getString(R.string.display_result, result));
     }
 }
