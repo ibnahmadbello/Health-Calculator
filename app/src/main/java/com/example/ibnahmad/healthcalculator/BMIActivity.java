@@ -110,7 +110,6 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
             weight = mPoundEditText.getText().toString().trim();
             height = mInchesEditText.getText().toString().trim();
             BMIPoundInches(weight, height);
-            Toast.makeText(this, "Pound and Inches should work!", Toast.LENGTH_SHORT).show();
         }
         else if (mKilogramEditText.isShown() && mMetersEditText.isShown()){
             if (mKilogramEditText.length() == 0 || mMetersEditText.length() == 0){
@@ -120,7 +119,6 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
             weight = mKilogramEditText.getText().toString().trim();
             height = mMetersEditText.getText().toString().trim();
             BMIKilogramMeters(weight, height);
-            Toast.makeText(this, "Kilogram and Meters is shown!", Toast.LENGTH_SHORT).show();
         }
 
     }
