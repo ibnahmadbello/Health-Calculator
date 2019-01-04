@@ -85,6 +85,7 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
                 mPoundEditText.setText("");
                 mInchesEditText.setVisibility(View.GONE);
                 mInchesEditText.setText("");
+                mResultTextView.setText("");
                 break;
             case R.id.bmi_pound_inches_button:
                 result = 0.0;
@@ -94,6 +95,7 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
                 mKilogramEditText.setText("");
                 mMetersEditText.setVisibility(View.GONE);
                 mMetersEditText.setText("");
+                mResultTextView.setText("");
                 break;
             case R.id.show_result_button:
                 calculateBMI();
