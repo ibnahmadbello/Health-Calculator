@@ -1,11 +1,13 @@
 package com.example.ibnahmad.healthcalculator;
 
+import android.content.Context;
 import android.graphics.Outline;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewOutlineProvider;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Objects;
 
 public class BMIActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -98,6 +101,10 @@ public class BMIActivity extends AppCompatActivity implements View.OnClickListen
                 mResultTextView.setText("");
                 break;
             case R.id.show_result_button:
+                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                if (inputMethodManager != null) {
+                    inputMethodManager.hideSoftInputFromWindow(Objects.requireNonNull(this.getCurrentFocus()).getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                }
                 calculateBMI();
                 break;
         }
