@@ -34,6 +34,10 @@ public class HealthTipActivity extends AppCompatActivity {
             case R.id.copy_right:
                 DialogFragment copyRightDialog = new CopyRightDialogFragment();
                 copyRightDialog.show(getSupportFragmentManager(), "copyright");
+                break;
+            case android.R.id.home:
+                this.onBackPressed();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
