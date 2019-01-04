@@ -9,19 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name"/>
+
         <activity
             android:name=".BMIActivity"
             android:label="@string/body_mass_index"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".HeartRatesActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HeartRatesActivity"
+            android:label="@string/heart_rate_calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".HealthTipActivity"
+            android:parentActivityName=".HeartRatesActivity"
+            android:label="@string/health_tips">
+            <intent-filter android:label="@string/health_tips">
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

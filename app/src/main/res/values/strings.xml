@@ -3,6 +3,8 @@
 
     <string name="body_mass_index">Body Mass Index</string>
 
+    <string name="heart_rate">Heart Rate Calculator</string>
+
     <string name="heart_rate_calculator">Heart Rate Calculator</string>
 
     <string name="bmi_title">BMI VALUES</string>
@@ -28,6 +30,82 @@
     <string name="hint_height_in_meters">Enter your Height in Meters</string>
 
     <string name="calculate">Show Result</string>
-    <string name="display_result">Your Body Mass Index (BMI) is: </string>
+    <string name="display_result">Your Body Mass Index (BMI) is: %.2f</string>
 
+    <string name="disclaimer">Disclaimer:</string>
+    <string name="disclaimer_detail">Always consult a Physician or a qualified health-care
+        professional before beginning or modifying your exercise program.</string>
+
+    <string name="show_heart_rate">Show Details</string>
+    <string name="enter_first_name">Enter First Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="date_of_birth">Date of Birth:</string>
+    <string name="date_of_birth_not_set">Not Set</string>
+    <string name="date_picker_title">Set Date Of Birth</string>
+    <string name="first_name_label">First Name:</string>
+    <string name="target_heart_rate_label">Target Heart Rate Range:</string>
+    <string name="maximum_heart_rate_label">Maximum Heart Rate (per minute):</string>
+    <string name="date_of_birth_label">Date of Birth:</string>
+    <string name="last_name_label">Last Name:</string>
+    <string name="age_label">Age (in years):</string>
+    <string name="maximum">%d per minute</string>
+    <string name="years">%1$d Years</string>
+    <string name="target_heart_rate">Your target heart rate range is %d - %d</string>
+    <string name="show_health_tip">Show Health Tips</string>
+    <string name="note_one">It is recommended that you exercise within 50 to 85 percent of your maximum heart rate for at least 20 to 30 minutes to get the best results from aerobic exercise. The Maximum Heart Rate (MHR) is the upper limit of what your cardiovascular system can handle during physical activity.</string>
+    <string name="note_three">Heart Rate Training Zones</string>
+    <string name="note_two">Note: Target Heart Rate is a range that\'s 50 - 80% of your Maximum Heart Rate. [These formulas varies and are estimates provided by American Heart Association (AHA). Maximum and Target Heart Rates may vary based on the health, fitness and gender of the individual.</string>
+    <string name="how_to_check_heart_rate">How to Check Your Heart Rate</string>
+    <string name="how_to_check_heart_rate_detail">Right after you stop exercising, take your pulse: Placethe tips of your first two fingers lightly over one of the blood vessels on your neck, just to the left or right of your Adam\'s apple. Or try the pulse spot inside your wrist just below the base of your thumb.\\n Count your pulse for 10 seconds and multiply the number by 6.</string>
+    <string name="heart_rate_training_zones">Your heart rate training zone is a critical element in exercise. You must train at a variety of different heart rates in order to stimulate your body to improve your fitness level.</string>
+    <string name="heart_rate_label">Heart Rate</string>
+    <string name="effort">Effort</string>
+    <string name="effect">Effect</string>
+    <string name="health_tip">Health Tips</string>
+    <string name="copy_right_stuff">Copy right</string>
+    <string name="zone_five">171 - 190</string>
+    <string name="very_hard">Very hard</string>
+    <string name="zone_five_effect">Performance Redline Zone</string>
+    <string name="zone_five_effort">90 - 100%</string>
+    <string name="zone_five_effect_sub">Develops maximum performance and speed</string>
+    <string name="zone_four">152 - 171</string>
+    <string name="hard">Hard</string>
+    <string name="zone_four_effort">80 - 90%</string>
+    <string name="zone_four_effect">Threshold Zone</string>
+    <string name="zone_four_effect_sub">Increase maximum performance capacity</string>
+    <string name="zone_three">133 - 152</string>
+    <string name="moderate">Moderate</string>
+    <string name="zone_three_effort">70 -80%</string>
+    <string name="zone_three_effect">Aerobic Zone</string>
+    <string name="zone_three_effect_sub">Improve aerobic fitness</string>
+    <string name="zone_two">114 - 133</string>
+    <string name="light">Light</string>
+    <string name="zone_two_effort">60 - 70%</string>
+    <string name="zone_two_effect">Temperate Zone</string>
+    <string name="zone_two_effect_sub">Improves basic endurance and fat burning</string>
+    <string name="zone_one">95 - 114</string>
+    <string name="very_light">Very Light</string>
+    <string name="zone_one_effort">50 - 60%</string>
+    <string name="zone_one_effect">Healthy Heart Zone</string>
+    <string name="zone_one_effect_sub">Improves overall health and helps recovery</string>
+    <string name="copy_right_content">This is to inform user that content of this app are not personal opinion. Rather they were gotten from sites like https://www.cancer.org and also from https://www.lifespanfitness.com</string>
+    <string name="zone_one_heading">Zone 1 - Healthy Heart Zone: 50% - 60% of your Max Heart Rate</string>
+    <string name="zone_one_subtitle">Easiest, Most Comfortable Zone</string>
+    <string name="zone_one_content">Body fat decreases, blood pressure lowered, cholesterol lowered, muscle mass improvements, decreased risk for degenerative diseases, safety high.</string>
+    <string name="exercise_benefits">Exercise Benefits</string>
+    <string name="zone_two_heading">Zone 2 - Temperate Zone: 60% - 70% of your Max Heart Rate</string>
+    <string name="zone_two_subtitle">Cruise Zone - you can train for extended periods of time in this zone, 75% - 85% of all calories from fat as fuel, 6 - 10 calories per minute</string>
+    <string name="zone_two_content">Gain muscle mass, lose fat mass, stregthen heart muscle, fat utilization zone, training your fat mobilization, fat transportation, your muscles burn fat, your fat cells to increase the rate of fat release, increase in the number of mitochondria in the muscle.</string>
+    <string name="zone_three_heading">Zone 3 - Aerobic Zone: 70% - 80% of your Max Heart Rate</string>
+    <string name="zone_three_subtitle">Transition Zone - from two health zones to two performance zones still feels comfortable, you will break a sweat, but no anaerobic burn sensation</string>
+    <string name="zone_three_content">Improved overall functional capacity with increase in the number and size of blood vessels, increased vital capacity, respiratory rate, max pulmonary ventilation, pulmonary diffusion, increase in size and strength of the heart, improvements in cardiac output and stroke volume.</string>
+    <string name="zone_four_heading">Zone 4 - Threshold Zone: 80% - 90% of your Max Heart Rate</string>
+    <string name="zone_four_subtitle">Max Calorie Burn Zone</string>
+    <string name="zone_four_content">Max fat burn, but you must be fit enough to train with some oxygen present for additional fat burn. No fat burning if exercising above fat burning heart rate. High total calories, burned during exercise, high carbohydrates as source of calories. Improved VO 2 and higher lactate tolerance.</string>
+    <string name="zone_five_heading">Zone 5 - Performance Redline Zone: 90% - 100% of your Max Heart Rate</string>
+    <string name="zone_five_subtitle">Peak Race Zone - Athlete Only Zone!</string>
+    <string name="zone_five_content">Highest total calories burned, but lowest percentage of fat calories. Lactate tolerance zone. This zone is only for the very healthy and fit!!! Spending too much time in this zone, even for the elite athletes can be painful, cause injuries and lead to over training, which leads to poor performance!</string>
+
+    <string name="health_tips">Health Tips</string>
+    <string name="empty_values">Your weight and height cannot be null.</string>
 </resources>
